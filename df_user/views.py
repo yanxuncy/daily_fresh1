@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from df_user.models import Passport
+from django.http import HttpResponse
 # Create your views here.
 def register(request):
     return render(request,'df_user/register.html')
@@ -18,3 +19,5 @@ def register_handle(request):
     Passport.objects.add_one_passport(username=username,password=password,email=email)
     # 3。跳转到登录页面
     return redirect('/user/login/')
+def index(request):
+    return HttpResponse('wold')
