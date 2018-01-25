@@ -19,5 +19,5 @@ def register_handle(request):
     Passport.objects.add_one_passport(username=username,password=password,email=email)
     # 3。跳转到登录页面
     return redirect('/user/login/')
-def index(request):
+def shouye(request):
     return HttpResponse('wold')
