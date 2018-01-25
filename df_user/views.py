@@ -1,5 +1,6 @@
 from django.shortcuts import render,redirect
 from df_user.models import Passport
+from django.http import HttpResponse
 # Create your views here.
 def register(request):
     return render(request,'df_user/register.html')
